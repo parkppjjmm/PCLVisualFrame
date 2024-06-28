@@ -1,21 +1,21 @@
 ##############################
-# 1. Open3D를 사용하여 .ply 파일로부터 포인트 클라우드 데이터를 로드합니다.
-# 2. 포인트와 색상 데이터를 NumPy 배열로 변환합니다.
-# 3. VTK 포인트 및 색상 배열을 생성하고 데이터를 추가합니다.
-# 4. VTK 폴리데이터 객체를 생성하고 포인트 및 색상 데이터를 설정합니다.
-# 5. VTK 필터를 설정하여 포인트 데이터를 처리합니다.
-# 6. VTK 매퍼와 액터를 생성하고 설정합니다.
-# 7. 생성된 VTK 액터를 반환하여 렌더러에 추가하고 화면에 렌더링합니다.
+1. Open3D를 사용하여 .ply 파일로부터 포인트 클라우드 데이터를 로드합니다.
+2. 포인트와 색상 데이터를 NumPy 배열로 변환합니다.
+3. VTK 포인트 및 색상 배열을 생성하고 데이터를 추가합니다.
+4. VTK 폴리데이터 객체를 생성하고 포인트 및 색상 데이터를 설정합니다.
+5. VTK 필터를 설정하여 포인트 데이터를 처리합니다.
+6. VTK 매퍼와 액터를 생성하고 설정합니다.
+7. 생성된 VTK 액터를 반환하여 렌더러에 추가하고 화면에 렌더링합니다.
 
 
 
 ### VTKVisualizer 클래스 초기화 및 GUI 설정
-class VTKVisualizer(QtWidgets.QMainWindow):
-    def __init__(self, parent=None):
-        QtWidgets.QMainWindow.__init__(self, parent)
+    class VTKVisualizer(QtWidgets.QMainWindow):
+        def __init__(self, parent=None):
+            QtWidgets.QMainWindow.__init__(self, parent)
 
-        self.frame = QtWidgets.QFrame()
-        self.vl = QtWidgets.QVBoxLayout()
+            self.frame = QtWidgets.QFrame()
+            self.vl = QtWidgets.QVBoxLayout()
 ### 
 VTKVisualizer 클래스는 QtWidgets.QMainWindow를 상속받아 GUI 애플리케이션의 메인 윈도우를 만듭니다.
 __init__ 메서드는 클래스의 생성자입니다. 부모 클래스 QMainWindow를 초기화합니다.
